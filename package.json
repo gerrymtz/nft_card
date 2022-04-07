@@ -1,0 +1,27 @@
+{
+  "name": "nft_card",
+  "version": "1.0.0",
+  "description": "Challenge NFT card",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerrymtz/nft_card.git"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "SASS"
+  ],
+  "author": "Gerardo Martínez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gerrymtz/nft_card/issues"
+  },
+  "homepage": "https://github.com/gerrymtz/nft_card#readme",
+  "devDependencies": {
+    "sass": "^1.50.0"
+  }
+}
