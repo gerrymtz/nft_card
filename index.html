@@ -3,27 +3,60 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
 		<link rel="stylesheet" href="css/styles.css">
-		<title>Frontend Mentor | NFT preview card component</title>
+		<title>NFT preview card</title>
 	</head>
 
 	<body>
 
-		Equilibrium #3429
+		<main class="main__container container">
 
-		Our Equilibrium collection promotes balance and calm.
+			<article class="card">
+				<figure class="card__figure">
+					<img src="assets/images/image_equilibrium.jpg" loading="eager" alt="Equilibrium" class="card__img">
 
-		0.041 ETH
-		3 days left
-		
-		Creation of Jules Wyvern
+					<div class="view">
+						<img src="assets/images/icon_view.svg" alt="Icon View" class="view__img">
+					</div>
+				</figure>
 
-		<div class="attribution">
-			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-			Coded by <a href="#">Your Name Here</a>.
-		</div>
+				<p class="card__title">Equilibrium #3429</p>
+
+				<p class="card__paragraph">Our Equilibrium collection promotes balance and calm.</p>
+
+				<div class="paragraph__flex">
+					<figure class="eth__figure">
+						<img src="assets/images/icon_ethereum.svg" alt="Icon Ethereum" class="eth__img">
+						
+						<figcaption class="eth__caption">0.041 ETH</figcaption>
+					</figure>
+
+					<figure class="time__figure">
+						<img src="assets/images/icon_clock.svg" alt="Icon Clock" class="time__img">
+
+						<figcaption class="time__caption">3 days left</figcaption>
+					</figure>
+				</div>
+
+				<div class="card__creation">
+					<div class="creation__border">
+						<img src="assets/images/image_avatar.png" alt="Creator" class="creation__img">
+					</div>
+
+					<p class="creation__profile"><span class="name__creation">Creation of </span><span class="creation__name"> Jules Wyvern</span></p>
+				</div>
+			</article>
+
+			<div class="card__attribution">
+				<p class="attribution__paragraph">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="atrribution__link">Frontend Mentor</a>.</p>
+
+				<p class="attribution__paragraph">Coded by <a href="#" class="atrribution__link">Gerardo Martínez</a>.</p>
+			</div>
+
+		</main>
+
 	</body>
 
 </html>

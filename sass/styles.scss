@@ -1,3 +1,213 @@
+@use 'index/index';
+@use 'sass:map';
+
+
+*,
+::after,
+::before {
+    @include index.resetGeneralSettings;
+}
+
+html {
+    @include index.setHTML;
+}
+
 body {
-    background-color: crimson;
+    @include index.setBody;
+    font-family: index.$outfitFont;
+    background-color: map.get(index.$neutralColors, "mainBG");
+}
+
+.container {
+    @include index.setGeneralContainer;
+}
+
+.main__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        width: 330px;
+        height: max-content;
+        background-color: map.get(index.$neutralColors, "cardBG");
+        padding: 20px 20px 35px;
+        border-radius: 10px;
+
+        .card__figure {
+            width: 100%;
+            height: 250px;
+            border-radius: inherit;
+            position: relative;
+            cursor: pointer;
+
+            .card__img {
+                display: block;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+            }
+
+            .view {
+                background-image:
+                linear-gradient( rgba(0, 255, 247, 0.5), rgba(0, 255, 247, 0.5));
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: inherit;
+                transform: scale(0);
+                transition: none;
+
+                .view__img {
+                    display: block;
+                    object-fit: contain;
+                }
+
+            }
+
+            &:hover .view {
+                transform: scale(1);
+                transition: none;
+            }
+
+        }
+
+        .card__title {
+            color: map.get(index.$neutralColors, "white");
+            margin-top: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            display: inline-block;
+
+            &:hover {
+                color: map.get(index.$primaryColors, "cyan");
+            }
+
+        }
+
+        .card__paragraph {
+            color: map.get(index.$primaryColors, "softBlue");
+            font-size: index.$outfitParagraph;
+            margin: 20px 0;
+        }
+
+        .paragraph__flex {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+
+            .eth__figure {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .eth__img {
+                    display: block;
+                    object-fit: contain;
+                }
+
+                .eth__caption {
+                    color: map.get(index.$primaryColors, "cyan");
+                }
+
+            }
+
+            .time__figure {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .time__img {
+                    display: block;
+                    object-fit: contain;
+                }
+
+                .time__caption {
+                    color: map.get(index.$primaryColors, "softBlue");
+                }
+
+            }
+
+        }
+
+        .card__creation {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-top: 1px solid map.get(index.$neutralColors, "line");
+            padding-top: 20px;
+
+            .creation__border {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: map.get(index.$neutralColors, "white");
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .creation__img {
+                    display: block;
+                    object-fit: contain;
+                    width: 95%;
+                    height: 95%;
+                }
+
+            }
+
+            .creation__profile {
+
+                .name__creation {
+                    color: map.get(index.$primaryColors, "softBlue");
+                }
+
+                .creation__name {
+                    color: map.get(index.$neutralColors, "white");
+                    cursor: pointer;
+
+                    &:hover {
+                        color: map.get(index.$primaryColors, "cyan");
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .card__attribution {
+        margin-top: 40px;
+
+        .attribution__paragraph {
+            color: map.get(index.$primaryColors, "softBlue");
+
+            &:nth-child(1) {
+                margin-bottom: 10px;
+            }
+
+            .atrribution__link {
+                color: map.get(index.$neutralColors, "white");
+
+                &:hover {
+                    color: map.get(index.$primaryColors, "cyan");
+                    text-decoration: none;
+                }
+
+            }
+
+        }
+
+    }
+
 }
